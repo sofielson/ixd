@@ -26,19 +26,27 @@
 
        $(document).ready(function(){
 
-         $('#randomize').click(function(){
+         $('#generate').click(function(){
 
          var arrayTop = new Array();
            arrayTop[0] = "top1";
            arrayTop[1] = "top2";
            arrayTop[2] = "top3";
            arrayTop[3] = "top4";
+           arrayTop[4] = "top5";
+           arrayTop[5] = "top6";
+           arrayTop[6] = "top7";
+           arrayTop[7] = "top8";
 
           var arrayTopStory = new Array();
             arrayTopStory[0] = "This is the story connected to Top 1";
             arrayTopStory[1] = "This is the story connected to Top 2";
             arrayTopStory[2] = "This is the story connected to Top 3";
             arrayTopStory[3] = "This is the story connected to Top 4";
+            arrayTopStory[4] = "This is the story connected to Top 5";
+            arrayTopStory[5] = "This is the story connected to Top 6";
+            arrayTopStory[6] = "This is the story connected to Top 7";
+            arrayTopStory[7] = "This is the story connected to Top 8";
 
          var path = path || 'img/';
          var num = Math.floor( Math.random() * arrayTop.length );
@@ -56,12 +64,20 @@
            arrayMiddle[1] = "middle2";
            arrayMiddle[2] = "middle3";
            arrayMiddle[3] = "middle4";
+           arrayMiddle[4] = "middle5";
+           arrayMiddle[5] = "middle6";
+           arrayMiddle[6] = "middle7";
+           arrayMiddle[7] = "middle8";
 
          var arrayMiddleStory = new Array();
            arrayMiddleStory[0] = "This is the story connected to Middle 1";
            arrayMiddleStory[1] = "This is the story connected to Middle 2";
            arrayMiddleStory[2] = "This is the story connected to Middle 3";
            arrayMiddleStory[3] = "This is the story connected to Middle 4";
+           arrayMiddleStory[4] = "This is the story connected to Middle 5";
+           arrayMiddleStory[5] = "This is the story connected to Middle 6";
+           arrayMiddleStory[6] = "This is the story connected to Middle 7";
+           arrayMiddleStory[7] = "This is the story connected to Middle 8";
 
          var path = path || 'img/';
          var num = Math.floor( Math.random() * arrayTop.length );
@@ -80,12 +96,20 @@
            arrayBottom[1] = "bottom2";
            arrayBottom[2] = "bottom3";
            arrayBottom[3] = "bottom4";
+           arrayBottom[4] = "bottom5";
+           arrayBottom[5] = "bottom6";
+           arrayBottom[6] = "bottom7";
+           arrayBottom[7] = "bottom8";
 
            var arrayBottomStory = new Array();
              arrayBottomStory[0] = "This is the story connected to Bottom 1";
              arrayBottomStory[1] = "This is the story connected to Bottom 2";
              arrayBottomStory[2] = "This is the story connected to Bottom 3";
              arrayBottomStory[3] = "This is the story connected to Bottom 4";
+             arrayBottomStory[4] = "This is the story connected to Bottom 5";
+             arrayBottomStory[5] = "This is the story connected to Bottom 6";
+             arrayBottomStory[6] = "This is the story connected to Bottom 7";
+             arrayBottomStory[7] = "This is the story connected to Bottom 8";
 
          var path = path || 'img/';
          var num = Math.floor( Math.random() * arrayTop.length );
@@ -127,7 +151,7 @@
     </div>
     <div class="storybox bhuman-bottom-storybox"></div>
   </div>
-      <input type="button" id="randomize" value="Generate" onclick="" />
+      <input type="button" id="generate" value="Generate" />
 
     </div>
 
