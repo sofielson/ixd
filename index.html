@@ -7,7 +7,7 @@
     <title>
     Team Three -- IXD Beta Human Museum
     </title>
-
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -18,81 +18,98 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
-
-    <div class="container">
       <script type="text/javascript">
 
-        var arrayTop = new Array();
-          arrayTop[0] = "100x100";
-          arrayTop[1] = "150x150";
-          arrayTop[2] = "200x200";
-          arrayTop[3] = "250x250";
-          arrayTop[4] = "300x300";
-          arrayTop[5] = "350x350";
-          arrayTop[6] = "400x400";
-
-        function getRandomImageTop(arrayTop, path) {
-            path = path || 'http://fpoimg.com/'; // default path here
-            var num = Math.floor( Math.random() * arrayTop.length );
-            var img = arrayTop[ num ];
-            var imgStr = '<img src="' + path + img + '" alt = "">';
-            document.write('<div class="bhuman-top">' + imgStr + '</div>');
-        }
-
-        var arrayMiddle = new Array();
-          arrayMiddle[0] = "100x100";
-          arrayMiddle[1] = "150x150";
-          arrayMiddle[2] = "200x200";
-          arrayMiddle[3] = "250x250";
-          arrayMiddle[4] = "300x300";
-          arrayMiddle[5] = "350x350";
-          arrayMiddle[6] = "400x400";
-
-        function getRandomImageMiddle(arrayMiddle, path) {
-            path = path || 'http://fpoimg.com/'; // default path here
-            var num = Math.floor( Math.random() * arrayMiddle.length );
-            var img = arrayMiddle[ num ];
-            var imgStr = '<img src="' + path + img + '" alt = "">';
-            document.write('<div class="bhuman-middle">' + imgStr + '</div>');
-        }
-
-        var arrayBottom = new Array();
-          arrayBottom[0] = "100x100";
-          arrayBottom[1] = "150x150";
-          arrayBottom[2] = "200x200";
-          arrayBottom[3] = "250x250";
-          arrayBottom[4] = "300x300";
-          arrayBottom[5] = "350x350";
-          arrayBottom[6] = "400x400";
-
-        function getRandomImageBottom(arrayBottom, path) {
-            path = path || 'http://fpoimg.com/'; // default path here
-            var num = Math.floor( Math.random() * arrayBottom.length );
-            var img = arrayBottom[ num ];
-            var imgStr = '<img src="' + path + img + '" alt = "">';
-            document.write('<div class="bhuman-bottom">' + imgStr + '</div>');
-        }
+       $(document).ready(function(){
 
 
-        function generateBody() {
-            getRandomImageTop(arrayTop, "");
-            getRandomImageMiddle(arrayMiddle, "");
-            getRandomImageBottom(arrayBottom, "");
-        }
-        
-      </script>
 
-      <input type="button" id="randomize" value="Generate" onclick="generateBody();" />
+         $('#randomize').click(function(){
+
+         var arrayTop = new Array();
+           arrayTop[0] = "top1";
+           arrayTop[1] = "top2";
+           arrayTop[2] = "top3";
+           arrayTop[3] = "top4";
+
+         var path = path || 'img/';
+         var num = Math.floor( Math.random() * arrayTop.length );
+         var img = arrayTop[ num ];
+         var imgStr = '<img src="' + path + img + '.png" alt = "">';
+
+         $('.bhuman-top').html(imgStr);
+         $('.bhuman-top-storybox').html('<p>My story</p>');
+
+         var arrayMiddle = new Array();
+           arrayMiddle[0] = "middle1";
+           arrayMiddle[1] = "middle2";
+           arrayMiddle[2] = "middle3";
+           arrayMiddle[3] = "middle4";
+
+         var path = path || 'img/';
+         var num = Math.floor( Math.random() * arrayTop.length );
+         var img = arrayMiddle[ num ];
+         var imgStr = '<img src="' + path + img + '.png" alt = "">';
+
+         $('.bhuman-middle').html(imgStr);
+         $('.bhuman-middle-storybox').html('<p>Middle story</p>');
+
+         var arrayBottom = new Array();
+           arrayBottom[0] = "bottom1";
+           arrayBottom[1] = "bottom2";
+           arrayBottom[2] = "bottom3";
+           arrayBottom[3] = "bottom4";
+
+         var path = path || 'img/';
+         var num = Math.floor( Math.random() * arrayTop.length );
+         var img = arrayBottom[ num ];
+         var imgStr = '<img src="' + path + img + '.png" alt = "">';
+
+         $('.bhuman-bottom').html(imgStr);
+         $('.bhuman-bottom-storybox').html('<p>This is my story</p>');
+
+        $('.storybox').css('border', '3px solid white');
+         });
+
+      });
+
+
+</script>
+<div class="bhuman-container">
+
+  <div>
+    <div class="bhuman-module bhuman-top" style="display:inline-block;">
+      <img src="gif/top.gif">
+    </div>
+    <div class="storybox bhuman-top-storybox"></div>
+  </div>
+
+  <div>
+    <div class="bhuman-module bhuman-middle" style="display:inline-block;">
+      <img src="gif/middle.gif">
+    </div>
+    <div class="storybox bhuman-middle-storybox"></div>
+  </div>
+
+  <div>
+    <div class="bhuman-module bhuman-bottom" style="display:inline-block;">
+      <img src="gif/bottom.gif">
+    </div>
+    <div class="storybox bhuman-bottom-storybox"></div>
+  </div>
+      <input type="button" id="randomize" value="Generate" onclick="" />
 
     </div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>

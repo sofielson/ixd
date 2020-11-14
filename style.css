@@ -1,0 +1,27 @@
+body{
+  background: #000000 !important;
+}
+.bhuman-container{
+margin: 0 auto !important;
+}
+.bhuman-module{
+}
+.bhuman-top{
+}
+
+#randomize{
+  background: white;
+  font-size: 34px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 20px;
+}
+
+.storybox{
+  display:inline-block;
+  z-index:9999;
+  width: 200px;
+}
+.storybox p{
+  color: white;
+}
