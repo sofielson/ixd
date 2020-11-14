@@ -26,8 +26,6 @@
 
        $(document).ready(function(){
 
-
-
          $('#randomize').click(function(){
 
          var arrayTop = new Array();
@@ -36,66 +34,94 @@
            arrayTop[2] = "top3";
            arrayTop[3] = "top4";
 
+          var arrayTopStory = new Array();
+            arrayTopStory[0] = "This is the story connected to Top 1";
+            arrayTopStory[1] = "This is the story connected to Top 2";
+            arrayTopStory[2] = "This is the story connected to Top 3";
+            arrayTopStory[3] = "This is the story connected to Top 4";
+
          var path = path || 'img/';
          var num = Math.floor( Math.random() * arrayTop.length );
          var img = arrayTop[ num ];
          var imgStr = '<img src="' + path + img + '.png" alt = "">';
+         var topStoryNum = arrayTop[num];
+         var topStoryStr = '<p>' + arrayTopStory[num] + '</p>';
 
          $('.bhuman-top').html(imgStr);
-         $('.bhuman-top-storybox').html('<p>My story</p>');
+         $('.bhuman-top-storybox').html(topStoryStr);
 
+        // MIDDLE PART
          var arrayMiddle = new Array();
            arrayMiddle[0] = "middle1";
            arrayMiddle[1] = "middle2";
            arrayMiddle[2] = "middle3";
            arrayMiddle[3] = "middle4";
 
+         var arrayMiddleStory = new Array();
+           arrayMiddleStory[0] = "This is the story connected to Middle 1";
+           arrayMiddleStory[1] = "This is the story connected to Middle 2";
+           arrayMiddleStory[2] = "This is the story connected to Middle 3";
+           arrayMiddleStory[3] = "This is the story connected to Middle 4";
+
          var path = path || 'img/';
          var num = Math.floor( Math.random() * arrayTop.length );
          var img = arrayMiddle[ num ];
          var imgStr = '<img src="' + path + img + '.png" alt = "">';
+         var middleStoryNum = arrayMiddle[num];
+         var middleStoryStr = '<p>' + arrayMiddleStory[num] + '</p>';
 
          $('.bhuman-middle').html(imgStr);
-         $('.bhuman-middle-storybox').html('<p>Middle story</p>');
+         $('.bhuman-middle-storybox').html(middleStoryStr);
 
+
+        // BOTTOM PART
          var arrayBottom = new Array();
            arrayBottom[0] = "bottom1";
            arrayBottom[1] = "bottom2";
            arrayBottom[2] = "bottom3";
            arrayBottom[3] = "bottom4";
 
+           var arrayBottomStory = new Array();
+             arrayBottomStory[0] = "This is the story connected to Bottom 1";
+             arrayBottomStory[1] = "This is the story connected to Bottom 2";
+             arrayBottomStory[2] = "This is the story connected to Bottom 3";
+             arrayBottomStory[3] = "This is the story connected to Bottom 4";
+
          var path = path || 'img/';
          var num = Math.floor( Math.random() * arrayTop.length );
          var img = arrayBottom[ num ];
          var imgStr = '<img src="' + path + img + '.png" alt = "">';
+         var bottomStoryNum = arrayBottom[num];
+         var bottomStoryStr = '<p>' + arrayBottomStory[num] + '</p>';
+
 
          $('.bhuman-bottom').html(imgStr);
-         $('.bhuman-bottom-storybox').html('<p>This is my story</p>');
+         $('.bhuman-bottom-storybox').html(bottomStoryStr);
 
         $('.storybox').css('border', '3px solid white');
          });
 
       });
 
-
 </script>
+
 <div class="bhuman-container">
 
-  <div>
+  <div style="position:relative;">
     <div class="bhuman-module bhuman-top" style="display:inline-block;">
       <img src="gif/top.gif">
     </div>
     <div class="storybox bhuman-top-storybox"></div>
   </div>
 
-  <div>
+  <div style="position:relative;">
     <div class="bhuman-module bhuman-middle" style="display:inline-block;">
       <img src="gif/middle.gif">
     </div>
     <div class="storybox bhuman-middle-storybox"></div>
   </div>
 
-  <div>
+  <div style="position:relative;">
     <div class="bhuman-module bhuman-bottom" style="display:inline-block;">
       <img src="gif/bottom.gif">
     </div>
