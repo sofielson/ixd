@@ -9,8 +9,12 @@
     </title>
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hep2dee.css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -122,44 +126,89 @@
          $('.bhuman-bottom').html(imgStr);
          $('.bhuman-bottom-storybox').html(bottomStoryStr);
 
-        $('.storybox').css('border', '3px solid white');
+        $('.storybox').css({'background-color': 'black', 'opacity':'.7'});
+
          });
 
       });
 
 </script>
 
-<div class="bhuman-container">
-
-  <div style="position:relative;">
-    <div class="bhuman-module bhuman-top" style="display:inline-block;">
-      <img src="gif/top.gif">
+<div id="theBetaHumanCarousel" class="carousel slide" data-interval="false" style="position:unset;">
+  <ol class="carousel-indicators">
+    <li data-target="#theBetaHumanCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#theBetaHumanCarousel" data-slide-to="1"></li>
+    <li data-target="#theBetaHumanCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="d-block w-100">
+        <div class="container">
+          <h1>Intro</h1>
+          <p>Lorem ipsum</p>
+        </div>
+      </div>
     </div>
-    <div class="storybox bhuman-top-storybox"></div>
+    <div class="carousel-item">
+      <div class="d-block w-100">
+
+          <!-- START BHUMAN GENERATE -->
+          <div class="bhuman-container">
+
+            <div class="bhuman-module">
+              <div class="bhuman-top" style="display:inline-block;">
+                <img src="gif/top.gif">
+              </div>
+              <div class="storybox bhuman-top-storybox"></div>
+            </div>
+
+            <div  class="bhuman-module">
+
+              <div class="storybox bhuman-middle-storybox" style="left: -90px !important;"></div>
+              <div class="bhuman-middle" style="display:inline-block;">
+                <img src="gif/middle.gif">
+              </div>
+            </div>
+
+            <div  class="bhuman-module">
+              <div class="bhuman-bottom" style="display:inline-block;">
+                <img src="gif/bottom.gif">
+              </div>
+              <div class="storybox bhuman-bottom-storybox"></div>
+            </div>
+
+            <input type="button" id="generate" value="Generate" />
+
+          </div>
+          <!-- END BHUMAN GENERATE -->
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100">
+        <div class="container">
+          <h1>Call to action</h1>
+          <p>Lorem ipsum</p>
+        </div>
+      </div>
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#theBetaHumanCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#theBetaHumanCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> <!-- END carousel -->
 
-  <div style="position:relative;">
-    <div class="bhuman-module bhuman-middle" style="display:inline-block;">
-      <img src="gif/middle.gif">
-    </div>
-    <div class="storybox bhuman-middle-storybox"></div>
-  </div>
-
-  <div style="position:relative;">
-    <div class="bhuman-module bhuman-bottom" style="display:inline-block;">
-      <img src="gif/bottom.gif">
-    </div>
-    <div class="storybox bhuman-bottom-storybox"></div>
-  </div>
-      <input type="button" id="generate" value="Generate" />
-
-    </div>
 
 
 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- <script src="script.js"></script> -->
   </body>
 </html>
