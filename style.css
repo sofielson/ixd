@@ -6,6 +6,9 @@ body{
   font-family: 'futura-pt', sans-serif;
   color: white;
 }
+.partly{
+  width: 200px;
+}
 .slide-container{
   margin-top:200px;
 }
@@ -23,6 +26,9 @@ body{
 .bhuman-module{
   position:relative;
   margin: 0 auto;
+}
+.bhuman-part{
+  display:inline-block;
 }
 
 #generate{
@@ -48,9 +54,12 @@ body{
   top: 10px;
   font-size: 22px;
 }
-.storybox .bhuman-middle-storybox{
+.bhuman-middle-storybox{
   left: -180px !important;
 }
+/* .storybox .bhuman-middle-storybox{
+  left: -90px !important;
+} */
 /* .storybox::after {
 	content: '';
 	position: absolute;
