@@ -83,14 +83,14 @@
 
          var arrayMiddleStory = new Array();
            arrayMiddleStory[0] = "This is the story connected to Middle 1. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <a href='#'  data-toggle='modal' data-target='#middleStory1'><i>Read more</i>";
-           arrayMiddleStory[1] = "This is the story connected to Middle 2. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-           arrayMiddleStory[2] = "This is the story connected to Middle 3. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-           arrayMiddleStory[3] = "This is the story connected to Middle 4. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-           arrayMiddleStory[4] = "This is the story connected to Middle 5. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-           arrayMiddleStory[5] = "This is the story connected to Middle 6. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-           arrayMiddleStory[6] = "This is the story connected to Middle 7. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-           arrayMiddleStory[7] = "This is the story connected to Middle 8. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-           arrayMiddleStory[8] = "This is the story connected to Middle 9. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+           arrayMiddleStory[1] = "This is the story connected to Middle 2. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <i>Read more</i>";
+           arrayMiddleStory[2] = "This is the story connected to Middle 3. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <i>Read more</i>";
+           arrayMiddleStory[3] = "This is the story connected to Middle 4. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <i>Read more</i>";
+           arrayMiddleStory[4] = "This is the story connected to Middle 5. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <i>Read more</i>";
+           arrayMiddleStory[5] = "This is the story connected to Middle 6. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <i>Read more</i>";
+           arrayMiddleStory[6] = "This is the story connected to Middle 7. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <i>Read more</i>";
+           arrayMiddleStory[7] = "This is the story connected to Middle 8. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <i>Read more</i>";
+           arrayMiddleStory[8] = "This is the story connected to Middle 9. Question is, how long can the story be? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/> <i>Read more</i>";
 
          var path = path || 'img/';
          var num = Math.floor( Math.random() * arrayTop.length );
@@ -157,10 +157,17 @@
 
 </script>
 
-
-      <div class="d-block w-100 full-page-container">
+<div id="theBetaHumanCarousel" class="carousel slide" data-interval="false" style="position:unset;">
+  <ol class="carousel-indicators">
+    <li data-target="#theBetaHumanCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#theBetaHumanCarousel" data-slide-to="1"></li>
+    <li data-target="#theBetaHumanCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="d-block w-100">
         <div class="container slide-container">
-          <div class="col-md-6 col-sm-12">
+          <div class="col-6">
             <h1>Intro</h1>
             <p>
               We all look different, that is a fact. Should our appearance really affect how much we earn, what kind of jobs we get and how we are treated in the workplace?
@@ -185,13 +192,10 @@
             </p>
           </div>
         </div>
-
-        <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-top:100px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div>
-
       </div>
     </div>
-
-      <div class="d-block w-100 full-page-container">
+    <div class="carousel-item">
+      <div class="d-block w-100">
 
           <!-- START BHUMAN GENERATOR -->
           <div class="bhuman-container">
@@ -218,25 +222,30 @@
               <div class="storybox bhuman-bottom-storybox"></div>
             </div>
 
-            <button id="generate">Generate</button>
+            <input type="button" id="generate" value="Generate" />
 
           </div>
           <!-- END BHUMAN GENERATOR -->
-          <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-top:100px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div>
-
       </div>
-
-      <div class="d-block w-100 full-page-container">
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100">
         <div class="container slide-container">
-          <div class="col-md-6 col-sm-12">
-            <h1>Call to action</h1>
-            <p>Lorem ipsum</p>
-          </div>
+          <h1>Call to action</h1>
+          <p>Lorem ipsum</p>
         </div>
       </div>
-
-
- <!-- END -->
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#theBetaHumanCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#theBetaHumanCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> <!-- END carousel -->
 
 <!-- MODALS -->
 <div class="modal fade" id="middleStory1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
