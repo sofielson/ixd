@@ -6,6 +6,9 @@ body{
   font-family: 'futura-pt', sans-serif;
   color: white;
 }
+.slide-container{
+  margin-top:200px;
+}
 .bhuman-container{
    /* position: absolute;
      top: 50%;
