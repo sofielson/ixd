@@ -44,20 +44,47 @@
       z-index: -20;
       position: relative;
   }
+  .carousel-item{
+    position: relative;
+    height: 500px;
+  }
   .stat-box{
-    background: white;
-    border-radius: 5px;
-    padding: 15px;
-    margin:10px;
+    width: 70%;
+    position: absolute;
+    margin-left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .stat-box p{
-    font-size: 16px;
-    color: #000000 !important;
-    line-height: 17px;
+    font-size: 22px;
+    text-align: center;
   }
-  .stat-box a{
-    color: #000000 !important;
-    text-decoration: underline;
+  @-moz-keyframes spin {
+      from { -moz-transform: rotate(0deg); }
+      to { -moz-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+      from { -webkit-transform: rotate(0deg); }
+      to { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+      from {transform:rotate(0deg);}
+      to {transform:rotate(360deg);}
+  }
+  .fa-glass-martini-alt{
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 3000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 3000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg);
   }
   #generate{
     background: white;
@@ -157,6 +184,12 @@
     .disclaimer{
       width: 70%;
     text-align: center;
+    }
+    .stat-box p{
+      font-size: 17px;
+    }
+    .carousel-item{
+      height: 727px;
     }
   }
   @media screen and (min-width: 601px){
@@ -445,21 +478,26 @@ Please note that the person in the story and the person in the photo are not the
         </div>
           <!-- END BHUMAN GENERATOR -->
           <!-- <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-top:100px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div> -->
-          <div class="row mx-auto" style="">
-            <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;margin-top:160px;" ></i>
-          </div>
+      <div class="row mx-auto" style="">
+        <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;margin-top:160px;" ></i>
       </div>
+      <!-- </div> -->
 
       <div class="d-block w-100" style="margin-top:140px;">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2>Statistics</h2>
-
-              <div class="d-flex justify-content-between flex-row">
-
+          <!-- carousel stats -->
+          <div id="statCarousel" class="carousel slide" data-ride="carousel">
+            <!-- <ol class="carousel-indicators">
+              <li data-target="#statCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#statCarousel" data-slide-to="1"></li>
+              <li data-target="#statCarousel" data-slide-to="2"></li>
+              <li data-target="#statCarousel" data-slide-to="3"></li>
+              <li data-target="#statCarousel" data-slide-to="4"></li>
+              <li data-target="#statCarousel" data-slide-to="5"></li>
+            </ol> -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
                 <!--top1-->
-                <div class="stat-box col">
+                <div class="stat-box">
                   <p>
                   According to a study conducted by Pew Research in the U.S earlier this year, about four-in-ten US adults say it has become more common for people to express racist views towards Asians since the pandemic began:
                   </p>
@@ -467,46 +505,31 @@ Please note that the person in the story and the person in the photo are not the
                   <p>31% reported being the subject of race-based jokes or slurs</p>
                   <p>26% admitted they feared being the target of a physical attack</p>
                 </div>
-
+              </div>
+              <div class="carousel-item">
                 <!-- middle7 -->
-                <div class="stat-box col-7">
+                <div class="stat-box">
                   <p>In the UK, the percentage of obese adults increased from 15% in 1993 to 27% in 2015, by which time 58% of women and 68% of men were designated overweight. All over the world, countless studies reveal that overweight employees face widespread prejudice.</p>
 
-    <p>To begin with, they are less likely to be hired for a job. In a 2016 study led by the psychologist Stuart W Flint of Sheffield Hallam University, participants were asked to evaluate candidates for different types of jobs. Shown hypothetical CVs with photographs depicting fat and thin people, the participants clearly perceived men and women of average weight to be the most suitable for employment. Obese women were the least likely to be hired. The researchers concluded that stereotypes of obese people being “less physically capable and slothful” were likely to have played a role in this outcome.</p>
+                  <p>To begin with, they are less likely to be hired for a job. In a 2016 study led by the psychologist Stuart W Flint of Sheffield Hallam University, participants were asked to evaluate candidates for different types of jobs. Shown hypothetical CVs with photographs depicting fat and thin people, the participants clearly perceived men and women of average weight to be the most suitable for employment. Obese women were the least likely to be hired. The researchers concluded that stereotypes of obese people being “less physically capable and slothful” were likely to have played a role in this outcome.</p>
 
-    <p>Earlier this year, University of Pennsylvania researchers concluded that obese people are stereotyped as being “lazy, incompetent, unattractive, lacking willpower and to blame for their excess weight”.</p>
+                  <p>Earlier this year, University of Pennsylvania researchers concluded that obese people are stereotyped as being “lazy, incompetent, unattractive, lacking willpower and to blame for their excess weight”.</p>
                 </div>
-
               </div>
-
-
-              <div class="d-flex justify-content-between flex-row">
-
+              <div class="carousel-item">
                 <!-- middle2 -->
-                <div class="stat-box col">
+                <div class="stat-box">
                   <p>
                     More than 1 in 4 employees have experienced discrimination due to their looks.. Looks have an impact on our professional lives: 86% of the employees surveyed by Univia believed physical appearance matters in the workplace. Overwhelmingly, respondents noted that appearance is an essential component of career success. Some of the top held beliefs included:</p>
 
-<p>Appearance influences client perception and company image (90%)</p>
-<p>Appearance affects employee confidence (85%)</p>
-<p>Appearance affects employee competency (73%)</p>
-                </div>
-
-                <!--  -->
-                <div class="stat-box col-5">
-                  <p>
-                    A <a href="https://yougov.co.uk/">YouGov</a> survey of HR professionals revealed more than half of 515 people questioned said they believed it would be easier to recruit a non-disabled person.
-While a third admitted they had never interviewed a disabled person.
-                  </p>
-
+                  <p>Appearance influences client perception and company image (90%)</p>
+                  <p>Appearance affects employee confidence (85%)</p>
+                  <p>Appearance affects employee competency (73%)</p>
                 </div>
               </div>
-
-
-              <div class="d-flex justify-content-between flex-row">
-
+              <div class="carousel-item">
                 <!-- middle2 -->
-                <div class="stat-box col">
+                <div class="stat-box">
                   <p>According to statistics gathered by <a href="https://moderngentlemen.net/tattoos-in-the-workplace-statistics/">moderngentlemen.net</a> - even though the modern workplace is becoming more tolerant of diversity, tattoos including, with each passing year. But still, we have a long way to go. Just have a look at the current statistics:</p>
 
                   <p>63% of people over 60 don’t approve of tattoos in the office.
@@ -515,23 +538,45 @@ While a third admitted they had never interviewed a disabled person.
                   Only 23% of employers will employ a professional regardless of the number and location of their tattoos.
                   Workplace diversity is greatly affected by tattoo discrimination in the recruiting process.</p>
                 </div>
-
-                <!--  -->
-                <div class="stat-box col">
+              </div>
+              <div class="carousel-item">
+                <!-- -->
+                <div class="stat-box">
                   <p>
                     According to a study conducted by The Department for Business, Innovation and Skills (BIS) and the <a href="https://www.equalityhumanrights.com/en/managing-pregnancy-and-maternity-workplace/pregnancy-and-maternity-discrimination-research-findings">Equality and Human Rights Commission</a>, around one in nine mothers (11%) reported that they were either dismissed; made compulsorily redundant, where others in their workplace were not; or treated so poorly they felt they had to leave their job; if scaled up to the general population this could mean as many as 54,000 mothers a year.
                   </p>
-
                 </div>
+
               </div>
+              <div class="carousel-item">
+                <!-- -->
+                <div class="stat-box">
+                  <p>
+                    A <a href="https://yougov.co.uk/">YouGov</a> survey of HR professionals revealed more than half of 515 people questioned said they believed it would be easier to recruit a non-disabled person.
+While a third admitted they had never interviewed a disabled person.
+                  </p>
+                </div>
 
-
-
-
+              </div>
             </div>
+            <a class="carousel-control-prev" href="#statCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#statCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-        </div>
+
+          <!-- end carousel stats -->
       </div>
+
+
+      <div class="row mx-auto" style="">
+        <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;margin-top:160px;" ></i>
+      </div>
+
 
       <div class="d-block w-100">
         <div class="container slide-container" style="margin-bottom: 100px;">
@@ -541,6 +586,81 @@ While a third admitted they had never interviewed a disabled person.
               <p>Thank you for taking the time to read through the stories told by these brave people. We hope that you bring these stories with you in your own work life and use your power to prevent history from repeating itself. If you want to help the cause, please consider donating money or show your support for any of the following organizations against discrimination in the workplace. Remember, the power lies with you.</p>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h3>Sign petitions</h3>
+
+              <ul>
+                <li>
+                  <a href="https://actionnetwork.org/petitions/sign-the-petition-stop-discrimination-against-the-lgbtq-community-and-defend-lgbtq-workers-rights?source=twitter">Stop discrimination against the LGBTQ+ community and defend LGBTQ+ workers’ rights.</a>
+                </li>
+                <li>
+                  <a href="https://www.megaphone.org.uk/petitions/uk-gov-act-to-prevent-sexual-harassment-at-work">End sexual harassment at work.</a>
+                </li>
+                <li>
+                  <a href="https://www.change.org/p/christian-porter-religious-discrimination-bill-stop-the-coalition-s-handmaid-s-tale-2">Stop the Religious Discrimination Bill.</a>
+                </li>
+                <li>
+                  <a href="https://www.change.org/p/canadian-employers-canadian-goverment-make-it-illegal-and-classed-as-discrimination-to-not-hire-someone-based-on-hair-colour-haircut-tattoos-or-piercings">Make it illegal and classed as discrimination to not hire someone based on hair colour, haircut, tattoos, or piercings.</a>
+                </li>
+                <li>
+                  <a href="https://www.change.org/p/bernie-sanders-disabled-workers-deserve-equal-pay-eafcd865-378c-4221-bf84-e45a71d8151d">Disabled Workers deserve Equal Pay.</a>
+                </li>
+                <li>
+                  <a href="https://www.dove.com/us/en/stories/campaigns/the-crown-act.html">DOVE The CROWN Act.</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h3>Donate money</h3>
+
+              <ul>
+                <li>
+                  <a href="Signiteurope.com">Signiteurope.com</a>
+                </li>
+                <li>
+                  <a href="https://www.kingsfund.org.uk/projects/inequalities-inclusion-nhs-providers/support-racism-discrimination">Kingsfund</a>
+                </li>
+                <li>
+                  <a href="https://www.womenslawproject.org/">Womenslawproject.org</a>
+                </li>
+                <li>
+                  <a href="https://www.acas.org.uk/">acas.org.uk</a>
+                </li>
+                <li>
+                  <a href="https://www.ilo.org/global/publications/world-of-work-magazine/articles/WCMS_081324/lang--en/index.htm">ilo.org</a>
+                </li>
+                <li>
+                  <a href="https://www.aclu.org/issues/womens-rights/womens-rights-workplace/gender-justice-workplace">aclu.org</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h3>Know your rights</h3>
+
+              <ul>
+                <li>
+                  <a href="https://www.equalrights.org/issue/economic-workplace-equality/discrimination-at-work/">KNOW YOUR RIGHTS AT WORK Gender Discrimination at Work.</a>
+                </li>
+                <li>
+                  <a href="https://www.do.se/lag-och-ratt/diskrimineringslagen/">Swedish law of discrimination (in Swedish)</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+
         </div>
       </div>
 
