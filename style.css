@@ -87,6 +87,7 @@ a{
   height:100%;
   float:right;
   padding: auto;
+  margin-right: 21px;
 }
 
 .story-flex-column{
@@ -120,6 +121,9 @@ a{
   .body-column{
     max-width:200px !important;
     left: 31%;
+  }
+  .body-flex-column{
+    margin-right: 8px;
   }
   .story-column{
     display:none;
