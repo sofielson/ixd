@@ -94,70 +94,73 @@
             e.preventDefault();
 
            $('.bhuman-top').html('<img class="bhuman-part" src="' + path + imgTop + '.png" alt = "">');
-           $('.bhuman-top').delay(800).animate({'margin-right': '238px'});
+           $('.bhuman-top').delay(800).animate({'right': '240'});
            $('.bhuman-top-storybox').html(topStoryStr);
            $('.bhuman-top-storybox').delay(900).animate({
-              left: '-280px',
+              // left: '-280px',
               'opacity':'1'
             });
 
            $('.bhuman-middle').html('<img class="bhuman-part" src="' + path + imgMiddle + '.png" alt = "">');
-           $('.bhuman-middle').delay(1000).animate({'margin-right': '238px'});
+           $('.bhuman-middle').delay(1000).animate({'position':'absolute','right': '240px'});
            $('.bhuman-middle-storybox').html(middleStoryStr);
            $('.bhuman-middle-storybox').delay(1100).animate({
-             left: '-280px',
+             // left: '-280px',
              'opacity':'1'
             });
 
            $('.bhuman-bottom').html('<img class="bhuman-part" src="' + path + imgBottom + '.png" alt = "">');
-           $('.bhuman-bottom').delay(1200).animate({'margin-right': '238px'});
+           $('.bhuman-bottom').delay(1200).animate({'position':'absolute','right': '240px'});
            $('.bhuman-bottom-storybox').html(bottomStoryStr);
            $('.bhuman-bottom-storybox').delay(1300).animate({
-              left: '-280px',
+              // left: '-280px',
               'opacity':'1'
             });
+            // $('.body-flex-column').delay(1500).animate({'float':'none'});
 
          });
 
         // MOBILE VERSION
 
-        $('#generateMobile').click(function(e){
-          e.preventDefault();
+                  $('#generateMobile').click(function(e){
+                    e.preventDefault();
 
-          // $(this).animate({'margin-top':'170px'});
+                    $('.bhuman-top').html('<img class="bhuman-part" src="' + path + imgTop + '.png" alt = "">');
+                    $('.bhuman-top').delay(800).animate({'right': '125px'});
+                    $('.bhuman-top-storybox').html(topStoryStr);
+                    $('.bhuman-top-storybox').delay(900).animate({
+                      // left: '-95px',
+                      opacity:'1',
+                      // width: '320px'
+                     });
 
-          $('.bhuman-top').html('<img class="bhuman-part" src="' + path + imgTop + '.png" alt = "">');
-          $('.bhuman-top').delay(800).animate({'margin-right': '100px'});
-          $('.bhuman-top-storybox').html(topStoryStr);
-          $('.bhuman-top-storybox').delay(900).animate({
-            // left: '-95px',
-            opacity:'1',
-            // width: '320px'
-           });
+                    $('.bhuman-middle').html('<img class="bhuman-part" src="' + path + imgMiddle + '.png" alt = "">');
+                    $('.bhuman-middle').delay(1000).animate({'right': '125px'});
+                    $('.bhuman-middle').delay(1400).animate({'margin-top': '20em'});
+                    $('.bhuman-middle-storybox').html(middleStoryStr);
+                    $('.bhuman-middle-storybox').delay(1100).animate({
+                      // left: '-95px',
+                      opacity:'1',
+                      // width: '320px',
+                      // 'margin-top' : '210px'
+                     });
 
-          $('.bhuman-middle').html('<img class="bhuman-part" src="' + path + imgMiddle + '.png" alt = "">');
-          $('.bhuman-middle').delay(1000).animate({'margin-right': '100px'});
-          $('.bhuman-middle-storybox').html(middleStoryStr);
-          $('.bhuman-middle-storybox').delay(1100).animate({
-            // left: '-95px',
-            opacity:'1',
-            // width: '320px',
-            // 'margin-top' : '210px'
-           });
+                    $('.bhuman-bottom').html('<img class="bhuman-part" src="' + path + imgBottom + '.png" alt = "">');
+                    $('.bhuman-bottom').delay(1200).animate({'right': '125px'});
+                    $('.bhuman-bottom').delay(1500).animate({'margin-top': '20em'});
+                    $('.bhuman-bottom-storybox').html(bottomStoryStr);
+                    $('.bhuman-bottom-storybox').delay(1300).animate({
+                       // left: '-95px',
+                       opacity:'1',
+                       // width: '320px',
+                       // 'margin-top' : '210px'
+                     });
 
-          $('.bhuman-bottom').html('<img class="bhuman-part" src="' + path + imgBottom + '.png" alt = "">');
-          $('.bhuman-bottom').delay(1200).animate({'margin-right': '100px'});
-          $('.bhuman-bottom-storybox').html(bottomStoryStr);
-          $('.bhuman-bottom-storybox').delay(1300).animate({
-             // left: '-95px',
-             opacity:'1',
-             // width: '320px',
-             // 'margin-top' : '210px'
-           });
+                     // $('.bhuman-part').animate({'margin-top':'80px'});
 
-           // $('.bhuman-part').animate({'margin-top':'80px'});
-
-           $('.body-flex-column').delay(500).animate({'padding':'100px 0;'});
+                     $('.body-flex-column').delay(1500).animate({'padding':'100px 0'});
+                     $('.body-flex-column').css({'position':'absolute'});
+                     $('.story-column').css({'display':'block'});
 
 
          });
@@ -209,13 +212,14 @@
       </div>
     </div>
 
-      <div class="d-block w-100 full-page-container">
+      <div class="d-block w-100">
 
           <!-- START BHUMAN GENERATOR -->
 
             <div class="row">
               <div class="col col-sm-5 body-column" style="">
-                <div class="d-flex justify-content-between flex-column body-flex-column" style="">
+                <!-- <div class="d-flex justify-content-between flex-column body-flex-column" style=""> -->
+              <div class="body-flex-column" style="">
 
                   <div class="">
                     <div class="bhuman-top" style="">
@@ -237,7 +241,7 @@
                 </div>
               </div>
               <div class="col-7 col-sm-7 story-column" style="">
-                <div class="d-flex justify-content-between flex-column story-flex-column" style="">
+                <div class="d-flex justify-content-center flex-column story-flex-column" style="">
 
                   <div class="storybox bhuman-top-storybox"></div>
                   <div class="storybox bhuman-middle-storybox"></div>
@@ -255,7 +259,7 @@
           <!-- END BHUMAN GENERATOR -->
           <!-- <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-top:100px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div> -->
           <div class="row mx-auto" style="">
-            <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;" ></i>
+            <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;margin-top:160px;" ></i>
           </div>
       </div>
 
