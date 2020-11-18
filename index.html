@@ -15,6 +15,7 @@
   <style>
   body{
     background: #000000 !important;
+    overflow-x: hidden;
   }
   *{
     font-family: 'futura-pt', sans-serif;
@@ -143,6 +144,7 @@
     display:none;
     font-size: 20px;
     text-decoration: underline;
+    text-align: center;
   }
   .story-flex-column{
     height: 100%;
@@ -200,6 +202,9 @@
     #statCarousel{
       margin-top: -70px;
       margin-bottom: -106px;
+    }
+    .refresh-page{
+      width: 300px;
     }
   }
   @media screen and (min-width: 601px) and (max-width: 900px){
@@ -262,8 +267,8 @@
            arrayTopStory[4] = 'The divisive hairstyle that is the man bun. One guy says he was fired for his. Sid Ouared said he was terminated from British Airways because of his man bun. <br />His supervisors gave him three choices; cut his hair, put it in a turban or wear dreadlocks. Ouared says he was fired based on discrimination and the claim that his style looked like “a girl’s hair".';
            arrayTopStory[5] = 'Mr Cheng’s skin started losing pigment 14 years ago in his teens, leaving uneven pale patches around his eyes and body.<br />At first, the loss of skin pigment did not bother him. But as the disease progressed, the unwanted stares in public and the subsequent roadblocks in his career became increasingly demoralising.<br />“In the frontline jobs that I applied for, I noticed (the interviewers) specifically asked what is wrong with my skin.<br />"....If the clients are not happy with how I look, then they would not give me the opportunity even though I have the capability,” he said.';
 
-         var path = path || 'img/';
-         // var path = path || 'http://dev.sofielson.com/ixd/img/'; TODO innan inskick!
+         // var path = path || 'img/';
+         var path = path || 'http://dev.sofielson.com/ixd/img/';
          var numTop = Math.floor( Math.random() * arrayTop.length );
          var imgTop = arrayTop[ numTop ];
          var topStoryNum = arrayTop[numTop];
