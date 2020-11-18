@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-    Team Three -- IXD Beta Human Museum
+    The Human Cocktail -- Team Three
     </title>
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/2ebeb30cdd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/hep2dee.css">
 
 
@@ -31,14 +31,14 @@
        $(document).ready(function(){
 
           var arrayTop = new Array();
-            arrayTop[0] = "top1";
-            arrayTop[1] = "top0";
+            arrayTop[0] = "top0";
+            arrayTop[1] = "top1";
             arrayTop[2] = "top2";
             arrayTop[3] = "top3";
 
          var arrayTopStory = new Array();
-           arrayTopStory[0] = '"I was the food editor at the Seattle P-I from 2000-2007. During that time, I wrote about every kind of cuisine, local farmers, regional foodways, everyday foods, high-end foods – a good mix that hopefully offered a little something for everyone. One day, our editors received a letter from a reader who suggested that instead of hiring a “fortune cookie” to cover the food scene that the P-I should have hired an American. Having grown up in Missouri, I assumed liberal, Pac-Rim-influenced Seattle would be a “safe” zone for me. Alas, the bubble is permeable. But my colleagues had my back. Our publisher sent this response: “Dear Sir: We are in receipt of your letter. We did hire an American.”" <br/>–  Hsiao-Ching Chou';
-           arrayTopStory[1] =  'Xiao Wang, a Chinese student in economical business in The Netherlands decided to try his luck at the big TV show Holland’s Got Talent. As he went on stage, he was immediately discriminated against due to his Chinese heritage, ridiculing his name at the very start. The abuse continues throughout his whole performance, with one of the judges constantly blurting out racial slurs and finding it hilarious himself. <a href="https://www.youtube.com/watch?v=3wzEPgpSRm4" >Have a look and see for yourself</a> - how would you react if you were being treated this way when applying for a new job, let alone in front of hundreds of thousands of people watching you. According to a study conducted by Pew Research in the U.S earlier this year, about four-in-ten US adults say it has become more common for people to express racist views towards Asians since the pandemic began: 39% said others have acted uncomfortably around them. 31% reported being the subject of race-based jokes or slurs. 26% admitted they feared being the target of a physical attack.';
+         arrayTopStory[0] =  'Xiao Wang, a Chinese student in economical business in The Netherlands decided to try his luck at the big TV show Holland’s Got Talent. As he went on stage, he was immediately discriminated against due to his Chinese heritage, ridiculing his name at the very start. The abuse continues throughout his whole performance, with one of the judges constantly blurting out racial slurs and finding it hilarious himself. <a href="https://www.youtube.com/watch?v=3wzEPgpSRm4" >Have a look and see for yourself</a> - how would you react if you were being treated this way when applying for a new job, let alone in front of hundreds of thousands of people watching you. According to a study conducted by Pew Research in the U.S earlier this year, about four-in-ten US adults say it has become more common for people to express racist views towards Asians since the pandemic began: 39% said others have acted uncomfortably around them. 31% reported being the subject of race-based jokes or slurs. 26% admitted they feared being the target of a physical attack.';
+           arrayTopStory[1] = '"I was the food editor at the Seattle P-I from 2000-2007. During that time, I wrote about every kind of cuisine, local farmers, regional foodways, everyday foods, high-end foods – a good mix that hopefully offered a little something for everyone. One day, our editors received a letter from a reader who suggested that instead of hiring a “fortune cookie” to cover the food scene that the P-I should have hired an American. Having grown up in Missouri, I assumed liberal, Pac-Rim-influenced Seattle would be a “safe” zone for me. Alas, the bubble is permeable. But my colleagues had my back. Our publisher sent this response: “Dear Sir: We are in receipt of your letter. We did hire an American.”" <br/>–  Hsiao-Ching Chou';
            arrayTopStory[2] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
            arrayTopStory[3] = 'Jess Blakeney, a 19-year-old from Brighton, says she was fired from her job for having dyed hair, despite having worked there for over a year, and being hired while having dyed hair. Blakeney said that she felt “incredibly underappreciated,” and that “having spent over a year being consistently reliable and committed to my job, it was a huge blow”.¨';
 
@@ -93,27 +93,27 @@
          $('#generate').click(function(e){
             e.preventDefault();
 
-           $('.bhuman-top').html('<img class="partly" src="' + path + imgTop + '.png" alt = "">');
-           $('.bhuman-top').delay(800).animate({'margin-left': '-460px'});
+           $('.bhuman-top').html('<img class="bhuman-part" src="' + path + imgTop + '.png" alt = "">');
+           $('.bhuman-top').delay(800).animate({'margin-right': '238px'});
            $('.bhuman-top-storybox').html(topStoryStr);
            $('.bhuman-top-storybox').delay(900).animate({
-              left: '-60px',
+              left: '-280px',
               'opacity':'1'
             });
 
-           $('.bhuman-middle').html('<img class="partly" src="' + path + imgMiddle + '.png" alt = "">');
-           $('.bhuman-middle').delay(1000).animate({'margin-left': '-460px'});
+           $('.bhuman-middle').html('<img class="bhuman-part" src="' + path + imgMiddle + '.png" alt = "">');
+           $('.bhuman-middle').delay(1000).animate({'margin-right': '238px'});
            $('.bhuman-middle-storybox').html(middleStoryStr);
            $('.bhuman-middle-storybox').delay(1100).animate({
-             left: '-60px',
+             left: '-280px',
              'opacity':'1'
             });
 
-           $('.bhuman-bottom').html('<img class="partly" src="' + path + imgBottom + '.png" alt = "">');
-           $('.bhuman-bottom').delay(1200).animate({'margin-left': '-460px'});
+           $('.bhuman-bottom').html('<img class="bhuman-part" src="' + path + imgBottom + '.png" alt = "">');
+           $('.bhuman-bottom').delay(1200).animate({'margin-right': '238px'});
            $('.bhuman-bottom-storybox').html(bottomStoryStr);
            $('.bhuman-bottom-storybox').delay(1300).animate({
-              left: '-60px',
+              left: '-280px',
               'opacity':'1'
             });
 
@@ -126,36 +126,39 @@
 
           // $(this).animate({'margin-top':'170px'});
 
-          $('.bhuman-top').html('<img class="partly" src="' + path + imgTop + '.png" alt = "">');
-          $('.bhuman-top').delay(800).animate({'margin-left': '-270px'});
+          $('.bhuman-top').html('<img class="bhuman-part" src="' + path + imgTop + '.png" alt = "">');
+          $('.bhuman-top').delay(800).animate({'margin-right': '100px'});
           $('.bhuman-top-storybox').html(topStoryStr);
           $('.bhuman-top-storybox').delay(900).animate({
-            left: '-95px',
+            // left: '-95px',
             opacity:'1',
-            width: '320px'
+            // width: '320px'
            });
 
-          $('.bhuman-middle').html('<img class="partly" src="' + path + imgMiddle + '.png" alt = "">');
-          $('.bhuman-middle').delay(1000).animate({'margin-left': '-270px','margin-top' : '195px'});
+          $('.bhuman-middle').html('<img class="bhuman-part" src="' + path + imgMiddle + '.png" alt = "">');
+          $('.bhuman-middle').delay(1000).animate({'margin-right': '100px'});
           $('.bhuman-middle-storybox').html(middleStoryStr);
           $('.bhuman-middle-storybox').delay(1100).animate({
-            left: '-95px',
+            // left: '-95px',
             opacity:'1',
-            width: '320px',
-            'margin-top' : '210px'
+            // width: '320px',
+            // 'margin-top' : '210px'
            });
 
-          $('.bhuman-bottom').html('<img class="partly" src="' + path + imgBottom + '.png" alt = "">');
-          $('.bhuman-bottom').delay(1200).animate({'margin-left': '-270px','margin-top' : '195px'});
+          $('.bhuman-bottom').html('<img class="bhuman-part" src="' + path + imgBottom + '.png" alt = "">');
+          $('.bhuman-bottom').delay(1200).animate({'margin-right': '100px'});
           $('.bhuman-bottom-storybox').html(bottomStoryStr);
           $('.bhuman-bottom-storybox').delay(1300).animate({
-             left: '-95px',
+             // left: '-95px',
              opacity:'1',
-             width: '320px',
-             'margin-top' : '210px'
+             // width: '320px',
+             // 'margin-top' : '210px'
            });
 
            // $('.bhuman-part').animate({'margin-top':'80px'});
+
+           $('.body-flex-column').delay(500).animate({'padding':'100px 0;'});
+
 
          });
 
@@ -164,12 +167,12 @@
 </script>
 
 
-      <div class="d-block w-100 full-page-container">
+      <div class="d-block w-100">
         <div class="container slide-container">
           <div class="col-md-6 col-sm-12">
-            <h1>Intro</h1>
+            <h1>The Human Cocktail</h1>
             <p>
-              Describe how to use the installation.
+              Describe how to use the installation. Something about that the stories are real but it's not the people in the photos that told them (Bullen style).
             </p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -198,7 +201,10 @@
           </div>
         </div>
 
-        <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-top:240px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div>
+        <!-- <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div> -->
+        <div class="row mx-auto" style="margin-top:230px;margin-bottom:200px;">
+          <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;" ></i>
+        </div>
 
       </div>
     </div>
@@ -206,36 +212,51 @@
       <div class="d-block w-100 full-page-container">
 
           <!-- START BHUMAN GENERATOR -->
-          <div class="bhuman-container">
 
-            <div class="bhuman-module">
-              <div class="bhuman-part bhuman-top" style="">
-                <img class="partly" src="gif/top.gif">
+            <div class="row">
+              <div class="col col-sm-5 body-column" style="">
+                <div class="d-flex justify-content-between flex-column body-flex-column" style="">
+
+                  <div class="">
+                    <div class="bhuman-top" style="">
+                      <img class="bhuman-part bhuman-top-gif" src="gif/top.gif">
+                    </div>
+                  </div>
+
+                  <div class="">
+                    <div class="bhuman-middle" style="">
+                      <img class="bhuman-part bhuman-middle-gif" src="gif/middle.gif">
+                    </div>
+                  </div>
+
+                  <div class="">
+                    <div class="bhuman-bottom" style="">
+                      <img class="bhuman-part bhuman-bottom-gif" src="gif/bottom.gif">
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="storybox bhuman-top-storybox"></div>
+              <div class="col-7 col-sm-7 story-column" style="">
+                <div class="d-flex justify-content-between flex-column story-flex-column" style="">
+
+                  <div class="storybox bhuman-top-storybox"></div>
+                  <div class="storybox bhuman-middle-storybox"></div>
+                  <div class="storybox bhuman-bottom-storybox"></div>
+
+                </div>
+              </div>
             </div>
 
-            <div  class="bhuman-module">
-              <div class="bhuman-part bhuman-middle" style="">
-                <img class="partly" src="gif/middle.gif">
-              </div>
-              <div class="storybox bhuman-middle-storybox"></div>
-            </div>
 
-            <div  class="bhuman-module">
-              <div class="bhuman-part bhuman-bottom" style="">
-                <img class="partly" src="gif/bottom.gif">
-              </div>
-              <div class="storybox bhuman-bottom-storybox"></div>
-            </div>
-
-            <button id="generate" class="desktop-only">Generate</button>
-            <button id="generateMobile" class="mobile-only">Generate</button>
+            <button id="generate" class="desktop-only">Stir cocktail</button>
+            <button id="generateMobile" class="mobile-only">Stir cocktail</button>
 
           </div>
           <!-- END BHUMAN GENERATOR -->
-          <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-top:100px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div>
-
+          <!-- <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-top:100px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div> -->
+          <div class="row mx-auto" style="">
+            <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;" ></i>
+          </div>
       </div>
 
       <div class="d-block w-100">

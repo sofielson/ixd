@@ -6,10 +6,6 @@ body{
   font-family: 'futura-pt', sans-serif;
   color: white;
 }
-.partly{
-  width: 255px;
-  /* opacity: 0.5; */
-}
 
 .full-page-container{
   width: 100vw;
@@ -23,18 +19,20 @@ body{
      top: 50%;
    left: 50%;
    transform: translate(-50%, -50%); */
-   display: flex;
-   flex-direction: column;
+   /* display: flex;
+   flex-direction: column; */
    margin-top: 120px;
    max-height: 100%;
    max-width: 100%;
 }
-.bhuman-module{
-  position:relative;
-  margin: 0 auto;
+.body-column{
+  position: absolute;
+  left: 280px;
 }
+
 .bhuman-part{
-  display:inline-block;
+  /* display:inline-block; */
+  width: 255px;
 }
 .bhuman-middle{
   margin-top: -55px;
@@ -77,16 +75,18 @@ body{
 
 .storybox{
   opacity: 0;
-  display:inline-block;
-  position: absolute;
+  /* display:inline-block;
+  position: absolute; */
   z-index:999;
-  width: 660px;
+  /* width: 660px; */
   border-radius: 5px;
   padding: 10px;
   left: 10px;
   top: 5px;
   font-size: 14px;
   line-height: 17px;
+  border: 1px solid white;
+  margin: 10px 350px 10px 0;
 }
 a{
   text-decoration: underline;
@@ -117,10 +117,19 @@ a{
 /* .storybox p{
   color: white;
 } */
+.body-flex-column{
+  height:100%;
+  float:right;
+  padding: auto;
+}
+.story-flex-column{
+  height: 100%;
+  padding: 20px 0;
+}
 
 @media screen and (max-width: 600px){
-  .partly{
-    width: 208px;
+  .bhuman-part{
+    width: 180px;
   }
   .bhuman-middle{
     margin-top: -35px;
@@ -145,7 +154,13 @@ a{
   }
   .storybox{
     background: rgba(0, 0, 0, 0.7);
+    margin: 10px 0 10px 0;
   }
+  .body-column{
+    max-width:200px !important;
+    left: 31%;
+  }
+
 }
 @media screen and (min-width: 601px){
   .desktop-only{
@@ -153,5 +168,11 @@ a{
   }
   .mobile-only{
     display:none !important;
+  }
+  .bhuman-middle-storybox{
+    margin-left: 30px;
+  }
+  .bhuman-bottom-storybox, .bhuman-top-storybox{
+    margin-right: 390px;
   }
 }
