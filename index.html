@@ -204,7 +204,21 @@
   .human-cocktail-row{
     height:670px;
   }
+  .random-image{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .random-image img{
+    max-height: 480px;
+  }
   @media screen and (max-width: 600px){
+    .random-image img{
+      max-height: 380px;
+    }
+    .slide-container{
+      margin-top:100px;
+    }
     .bhuman-part{
       width: 180px;
     }
@@ -459,38 +473,83 @@
 
          });
 
+
+         function randomizeImage()
+         {
+           var arrayAllImgs = new Array();
+             arrayAllImgs[0] = "top0";
+             arrayAllImgs[1] = "top1";
+             arrayAllImgs[2] = "top2";
+             arrayAllImgs[3] = "top3";
+             arrayAllImgs[4] = "top4";
+             arrayAllImgs[5] = "top5";
+             arrayAllImgs[6] = "top6";
+             arrayAllImgs[7] = "top7";
+             arrayAllImgs[8] = "middle0";
+             arrayAllImgs[9] = "middle1";
+             arrayAllImgs[10] = "middle2";
+             arrayAllImgs[11] = "middle3";
+             arrayAllImgs[12] = "middle4";
+             arrayAllImgs[13] = "middle5";
+             arrayAllImgs[14] = "middle6";
+             arrayAllImgs[15] = "bottom0";
+             arrayAllImgs[16] = "bottom1";
+             arrayAllImgs[17] = "bottom2_2";
+             arrayAllImgs[18] = "bottom3";
+             arrayAllImgs[19] = "bottom4";
+             arrayAllImgs[20] = "bottom5";
+             arrayAllImgs[21] = "bottom6";
+
+           var path = path || 'http://dev.sofielson.com/ixd/img/';
+           var numAllImgs = Math.floor( Math.random() * arrayAllImgs.length );
+           var imgAllImgs = arrayAllImgs[ numAllImgs ];
+
+            $('.random-image').html('<img src="' + path + imgAllImgs + '.png" alt = "">');
+         };
+        randomizeImage();
+
       });
+
+
 
 </script>
 
 
       <div class="d-block w-100">
         <div class="container slide-container">
-          <div class="col-md-6 col-sm-12">
-            <h1>The Human Cocktail</h1>
-            <p>
-We all look different, that is a fact. Should our appearance really affect how much we earn, what kind of jobs we get and how we are treated in the workplace?
-            </p>
-            <p>
-We strongly believe that one of the things that makes you you, is the unique mix we all are of different people, gender, race, personality and appearances.
-            </p>
-            <p>
-As Martin Luther King Jr said in 1963:
-            </p>
-            <p>
-              <span class="italic">
-“I have a dream that my four children will one day live in a nation where they will not be judged by the colour of their skin, but by the content of their character”
-              </span>
-            </p>
-            <p>
-Still, 60 years later here we are... People are still being judged for anything except the content of their character.
-            </p>
-            <p>
-With this installation, we hope to showcase the power that companies have over our appearance, highlight the struggles everyone goes through on a day-to-day basis, and evoke empathy for the minorities in the workplace. We hope that you will leave the installation feeling a bit better informed and ready to become the change we need for a more diverse, equal and inclusive workplace.
-            </p>
-          <p>
-          Please scroll down to stir the Human Cocktail and mix your cocktail of randomly generated human attributes and lose yourself in the powerful stories they are attached to and think of you own workplace and your own mix. What ingredients goes in to your own human cocktail?
-        </p>
+          <div class="row">
+            <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center" style="margin-bottom:100px;">
+              <div class="random-image">
+
+              </div>
+              <!-- <img class="random-image" src="http://dev.sofielson.com/ixd/img/middle6.png" /> -->
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <h1>The Human Cocktail</h1>
+              <p>
+  We all look different, that is a fact. Should our appearance really affect how much we earn, what kind of jobs we get and how we are treated in the workplace?
+              </p>
+              <p>
+  We strongly believe that one of the things that makes you you, is the unique mix we all are of different people, gender, race, personality and appearances.
+              </p>
+              <p>
+  As Martin Luther King Jr said in 1963:
+              </p>
+              <p>
+                <span class="italic">
+  “I have a dream that my four children will one day live in a nation where they will not be judged by the colour of their skin, but by the content of their character”
+                </span>
+              </p>
+              <p>
+  Still, 60 years later here we are... People are still being judged for anything except the content of their character.
+              </p>
+              <p>
+  With this installation, we hope to showcase the power that companies have over our appearance, highlight the struggles everyone goes through on a day-to-day basis, and evoke empathy for the minorities in the workplace. We hope that you will leave the installation feeling a bit better informed and ready to become the change we need for a more diverse, equal and inclusive workplace.
+              </p>
+              <p>
+              Please scroll down to stir the Human Cocktail and mix your cocktail of randomly generated human attributes and lose yourself in the powerful stories they are attached to and think of you own workplace and your own mix. What ingredients goes in to your own human cocktail?
+              </p>
+            </div>
           </div>
         </div>
 
