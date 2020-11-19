@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/2ebeb30cdd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/hep2dee.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  </head>
+
   <style>
 
   html,body{
@@ -160,13 +160,17 @@
     opacity: 0;
     z-index:999;
     border-radius: 5px;
-    padding: 10px;
+    padding: 14px;
     left: 10px;
     top: 5px;
     font-size: 14px;
     line-height: 17px;
     border: 1px solid white;
     margin: 10px 350px 10px 0;
+  }
+  .storybox p{
+    padding: 0 !important;
+    margin-bottom: 0 !important;
   }
   .bhuman-middle-storybox{
     margin-left: 30px;
@@ -184,7 +188,7 @@
   .body-flex-column{
     height:100%;
     float:right;
-    padding: auto;
+    /* padding: auto; */
     margin-right: 21px;
   }
   .refresh-page{
@@ -289,9 +293,10 @@
     }
   }
   </style>
+</head>
 
   <body>
-      <script type="text/javascript">
+      <script>
 
        $(document).ready(function(){
 
@@ -408,48 +413,48 @@
 
         // MOBILE VERSION
 
-                  $('#generateMobile').click(function(e){
-                    e.preventDefault();
+        $('#generateMobile').click(function(e){
+          e.preventDefault();
 
-                    $('#generateMobile').css({'visibility':'hidden', 'height': '0'});
-                    $('.refresh-page').css({'display':'block'});
+          $('#generateMobile').css({'visibility':'hidden', 'height': '0'});
+          $('.refresh-page').css({'display':'block'});
 
-                    $('.bhuman-top').html('<img class="bhuman-part" src="' + path + imgTop + '.png" alt = "">');
-                    $('.bhuman-top').delay(800).animate({'right': '125px'});
-                    $('.bhuman-top-storybox').html(topStoryStr);
-                    $('.bhuman-top-storybox').delay(900).animate({
-                      // left: '-95px',
-                      opacity:'1',
-                      // width: '320px'
-                     });
+          $('.bhuman-top').html('<img class="bhuman-part" src="' + path + imgTop + '.png" alt = "">');
+          $('.bhuman-top').delay(800).animate({'right': '125px'});
+          $('.bhuman-top-storybox').html(topStoryStr);
+          $('.bhuman-top-storybox').delay(900).animate({
+            // left: '-95px',
+            opacity:'1',
+            // width: '320px'
+           });
 
-                    $('.bhuman-middle').html('<img class="bhuman-part" src="' + path + imgMiddle + '.png" alt = "">');
-                    $('.bhuman-middle').delay(1000).animate({'right': '125px'});
-                    $('.bhuman-middle').delay(1400).animate({'margin-top': '190px'});
-                    $('.bhuman-middle-storybox').html(middleStoryStr);
-                    $('.bhuman-middle-storybox').delay(1100).animate({
-                      // left: '-95px',
-                      opacity:'1',
-                      // width: '320px',
-                      // 'margin-top' : '210px'
-                     });
+          $('.bhuman-middle').html('<img class="bhuman-part" src="' + path + imgMiddle + '.png" alt = "">');
+          $('.bhuman-middle').delay(1000).animate({'right': '125px'});
+          $('.bhuman-middle').delay(1400).animate({'margin-top': '190px'});
+          $('.bhuman-middle-storybox').html(middleStoryStr);
+          $('.bhuman-middle-storybox').delay(1100).animate({
+            // left: '-95px',
+            opacity:'1',
+            // width: '320px',
+            // 'margin-top' : '210px'
+           });
 
-                    $('.bhuman-bottom').html('<img class="bhuman-part" src="' + path + imgBottom + '.png" alt = "">');
-                    $('.bhuman-bottom').delay(1200).animate({'right': '125px'});
-                    $('.bhuman-bottom').delay(1500).animate({'margin-top': '190px'});
-                    $('.bhuman-bottom-storybox').html(bottomStoryStr);
-                    $('.bhuman-bottom-storybox').delay(1300).animate({
-                       // left: '-95px',
-                       opacity:'1',
-                       // width: '320px',
-                       // 'margin-top' : '210px'
-                     });
+          $('.bhuman-bottom').html('<img class="bhuman-part" src="' + path + imgBottom + '.png" alt = "">');
+          $('.bhuman-bottom').delay(1200).animate({'right': '125px'});
+          $('.bhuman-bottom').delay(1500).animate({'margin-top': '190px'});
+          $('.bhuman-bottom-storybox').html(bottomStoryStr);
+          $('.bhuman-bottom-storybox').delay(1300).animate({
+             // left: '-95px',
+             opacity:'1',
+             // width: '320px',
+             // 'margin-top' : '210px'
+           });
 
-                     // $('.bhuman-part').animate({'margin-top':'80px'});
+           // $('.bhuman-part').animate({'margin-top':'80px'});
 
-                     $('.body-flex-column').delay(1500).animate({'padding':'100px 0'});
-                     $('.body-flex-column').css({'position':'absolute'});
-                     $('.story-column').css({'display':'block'});
+           $('.body-flex-column').delay(1500).animate({'padding':'100px 0'});
+           $('.body-flex-column').css({'position':'absolute'});
+           $('.story-column').css({'display':'block'});
 
 
          });
@@ -495,32 +500,31 @@ With this installation, we hope to showcase the power that companies have over o
         </div>
 
       </div>
-    </div>
 
       <div class="d-block w-100">
 
           <!-- START BHUMAN GENERATOR -->
 
-            <div class="row" class="human-cocktail-row">
-              <div class="col col-sm-5 body-column" style="">
+            <div class="row human-cocktail-row">
+              <div class="col col-sm-5 body-column">
                 <!-- <div class="d-flex justify-content-between flex-column body-flex-column" style=""> -->
               <div class="body-flex-column" style="">
 
                   <div class="">
                     <div class="bhuman-top" style="">
-                      <img class="bhuman-part bhuman-top-gif" src="gif/top.gif">
+                      <img class="bhuman-part bhuman-top-gif" src="gif/top.gif" alt="Head">
                     </div>
                   </div>
 
                   <div class="">
                     <div class="bhuman-middle" style="">
-                      <img class="bhuman-part bhuman-middle-gif" src="gif/middle.gif">
+                      <img class="bhuman-part bhuman-middle-gif" src="gif/middle.gif" alt="Torso">
                     </div>
                   </div>
 
                   <div class="">
                     <div class="bhuman-bottom" style="">
-                      <img class="bhuman-part bhuman-bottom-gif" src="gif/bottom.gif">
+                      <img class="bhuman-part bhuman-bottom-gif" src="gif/bottom.gif" alt="Legs">
                     </div>
                   </div>
                 </div>
