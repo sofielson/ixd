@@ -1,3 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+    The Human Cocktail -- Team Three
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/2ebeb30cdd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/hep2dee.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <style>
+
+    html,body{
+      overflow-x: hidden;
+    }
+    body{
+      background: #000000;
+    }
+    *{
+      font-family: 'futura-pt', sans-serif;
+      color: white;
+    }
+    h3{
+      margin-top: 10px;
+    }
+    .slide-container{
+      margin-top:200px;
+    }
+    .body-column{
+      left: 298px;
+    }
+    .bhuman-part{
+      width: 255px;
+    }
+    .bhuman-top{
+      z-index: 1;
+      position: relative;
+    }
+    .bhuman-middle{
+      margin-top: -55px;
+        z-index: -10;
+        position: relative;
+    }
+    .bhuman-bottom{
+      margin-top: -55px;
+        z-index: -20;
+        position: relative;
+    }
+    .carousel-item{
+      position: relative;
+      height: 500px;
+    }
+    .carousel-item:before{
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      /* -webkit-animation-name: spin;
+      -webkit-animation-duration: 50000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 50000ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 50000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+      -o-transition: rotate(3600deg); */
+    }
+    .carousel-item-1:before{
+      background: url('http://dev.sofielson.com/ixd/img/top0.png') no-repeat center;
+    }
+    .carousel-item-2:before{
+      background: url('http://dev.sofielson.com/ixd/img/middle5.png') no-repeat center;
+    }
+    .carousel-item-3:before{
+      background: url('http://dev.sofielson.com/ixd/img/top2.png') no-repeat center;
+    }
+    .carousel-item-4:before{
+      background: url('http://dev.sofielson.com/ixd/img/middle2.png') no-repeat center;
+      /* background-size: 300px; */
+    }
+    .carousel-item-5:before{
+      background: url('http://dev.sofielson.com/ixd/img/middle6.png') no-repeat center;
+    }
+    .carousel-item-6:before{
+      background: url('http://dev.sofielson.com/ixd/img/bottom2_2.png') no-repeat center;
+      background-size: 350px;
+    }
+    .stat-box{
+      width: 70%;
+      position: absolute;
+      margin-left: 15%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .stat-box p{
+      font-size: 22px;
+      text-align: center;
+    }
+    @-moz-keyframes spin {
+        from { -moz-transform: rotate(0deg); }
+        to { -moz-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+    .fa-glass-martini-alt{
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 3000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 3000ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 3000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+      -o-transition: rotate(3600deg);
+    }
+    #generate{
+      background: #d80f95;
+      font-size: 34px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      display: block;
+      margin-top: 57px;
+     margin-left: auto;
+     margin-right: auto;
+     color: #ffffff;
+     border: none;
+    }
+    #generateMobile{
+      background: #d80f95;
+      font-size: 26px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      display: block;
+      margin-top: 21px;
+     margin-left: auto;
+     margin-right: auto;
+     color: #ffffff;
+     border: none;
+    }
+    #generate:hover{
+      background: #990a69;
+    }
+    #generateMobile:hover{
+      background: #990a69;
+    }
+    .storybox{
+      opacity: 0;
+      z-index:999;
+      border-radius: 5px;
+      padding: 14px;
+      left: 10px;
+      top: 5px;
+      font-size: 14px;
+      line-height: 17px;
+      border: 1px solid white;
+      margin: 10px 350px 10px 0;
+    }
+    .storybox p{
+      padding: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .bhuman-middle-storybox{
+      margin-left: 30px;
+    }
+    .bhuman-bottom-storybox, .bhuman-top-storybox{
+      margin-right: 377px;
+    }
+    a{
+      text-decoration: underline;
+      color: white !important;
+    }
+    .italic{
+      font-style: italic;
+    }
+    .body-flex-column{
+      height:100%;
+      float:right;
+      /* padding: auto; */
+      margin-right: 21px;
+    }
+    .refresh-page{
+      display:none;
+      font-size: 20px;
+      text-decoration: underline;
+      text-align: center;
+    }
+    .story-flex-column{
+      height: 100%;
+      padding: 20px 0;
+    }
+    .human-cocktail-row{
+      height:670px;
+    }
+    .random-image{
+      text-align: center;
+      justify-content: center;
+      display: flex;
+    }
+    .random-image img{
+      max-height: 480px;
+    }
+    .logo{
+      max-width: 270px;
+    }
+    @media screen and (max-width: 600px){
+      .random-image img{
+        max-height: 380px;
+      }
+      .logo{
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 65px;
+      }
+      .slide-container{
+        margin-top:100px;
+      }
+      .bhuman-part{
+        width: 180px;
+      }
+      .bhuman-middle{
+        margin-top: -35px;
+      }
+      .bhuman-bottom{
+        margin-top: -20px;
+      }
+      .desktop-only{
+        display:none !important;
+      }
+      .mobile-only{
+        display:block !important;
+      }
+      .bhuman-container{
+        margin-top: 0;
+      }
+      .storybox{
+        background: rgba(0, 0, 0, 0.7);
+        margin: 10px 0 10px 0;
+      }
+      .body-column{
+        max-width:200px !important;
+        left: 34%;
+      }
+      .body-flex-column{
+        margin-right: 8px;
+      }
+      .story-column{
+        display:none;
+      }
+      .human-cocktail-row{
+        height:500px;
+      }
+      .disclaimer{
+        width: 70%;
+      text-align: center;
+      }
+      .stat-box p{
+        font-size: 17px;
+      }
+      .carousel-item{
+        height: 880px;
+      }
+      #statCarousel{
+        margin-top: -70px;
+        margin-bottom: -106px;
+      }
+      .refresh-page{
+        width: 300px;
+      }
+    }
+    @media screen and (min-width: 601px) and (max-width: 900px){
+      .storybox{
+        width: 20em;
+      }
+      .body-column{
+        left: 220px;
+      }
+    }
+    @media screen and (min-width: 901px) and (max-width: 1240px){
+      .storybox{
+        margin-right: 30px;
+      }
+      .bhuman-middle-storybox{
+        margin-left: 22px;
+      }
+      .bhuman-bottom-storybox, .bhuman-top-storybox{
+        margin-right: 60px;
+      }
+      .bhuman-bottom,.bhuman-middle,.bhuman-top{
+        right: 0;
+      }
+      .body-column{
+        left: 257px;
+      }
+    }
+  /* generate button show hide */
+    @media screen and (min-width: 601px){
+      .desktop-only{
+        display:block !important;
+      }
+      .mobile-only{
+        display:none !important;
+      }
+    }
+
+  </style>
+</head>
+
+  <body>
+      <script>
 
              $(document).ready(function(){
 
@@ -18,7 +348,7 @@
                  arrayTopStory[5] = 'Mr Cheng’s skin started losing pigment 14 years ago in his teens, leaving uneven pale patches around his eyes and body.<br />At first, the loss of skin pigment did not bother him. But as the disease progressed, the unwanted stares in public and the subsequent roadblocks in his career became increasingly demoralising.<br />“In the frontline jobs that I applied for, I noticed (the interviewers) specifically asked what is wrong with my skin.<br />"....If the clients are not happy with how I look, then they would not give me the opportunity even though I have the capability,” he said.';
 
                // var path = path || 'img/';
-               var path = path || 'https://dev.sofielson.com/ixd/img/';
+               var path = path || 'http://dev.sofielson.com/ixd/img/';
                var numTop = Math.floor( Math.random() * arrayTop.length );
                var imgTop = arrayTop[ numTop ];
                var topStoryNum = arrayTop[numTop];
@@ -188,7 +518,7 @@
                    arrayAllImgs[20] = "bottom5";
                    arrayAllImgs[21] = "bottom6";
 
-                 var path = path || 'https://dev.sofielson.com/ixd/img/';
+                 var path = path || 'http://dev.sofielson.com/ixd/img/';
                  var numAllImgs = Math.floor( Math.random() * arrayAllImgs.length );
                  var imgAllImgs = arrayAllImgs[ numAllImgs ];
 
@@ -197,3 +527,299 @@
               randomizeImage();
 
             });
+
+      </script>
+
+
+      <div class="d-block w-100">
+        <div class="container slide-container">
+          <div class="row">
+            <div class="col-md-4 col-sm-5">
+              <img class="logo" src="http://dev.sofielson.com/ixd/img/logo.png" alt="Logo" />
+            </div>
+            <div class="col-md-7 col-sm-12">
+              <h1>The Human Cocktail</h1>
+              <p>
+  We all look different, that is a fact. Should our appearance really affect how much we earn, what kind of jobs we get and how we are treated in the workplace?
+              </p>
+              <p>
+  We strongly believe that one of the things that makes you you, is the unique mix we all are of different people, gender, race, personality and appearances.
+              </p>
+              <p>
+  As Martin Luther King Jr said in 1963:
+              </p>
+              <p>
+                <span class="italic">
+  “I have a dream that my four children will one day live in a nation where they will not be judged by the colour of their skin, but by the content of their character”
+                </span>
+              </p>
+              <p>
+  Still, 60 years later here we are... People are still being judged for anything except the content of their character.
+              </p>
+              <p>
+  With this installation, we hope to showcase the power that companies have over our appearance, highlight the struggles everyone goes through on a day-to-day basis, and evoke empathy for the minorities in the workplace. We hope that you will leave the installation feeling a bit better informed and ready to become the change we need for a more diverse, equal and inclusive workplace.
+              </p>
+              <p>
+              Please scroll down to stir the Human Cocktail and mix your cocktail of randomly generated human attributes and lose yourself in the powerful stories they are attached to and think of you own workplace and your own mix. What ingredients goes in to your own human cocktail?
+              </p>
+            </div>
+
+
+              <!-- <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center" style="margin-bottom:100px;">
+                <div class="random-image"></div>
+              </div> -->
+
+          </div>
+        </div>
+
+        <!-- <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div> -->
+        <div class="row mx-auto" style="margin-top:230px;margin-bottom:200px;">
+          <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;" ></i>
+        </div>
+
+      </div>
+
+      <div class="d-block w-100">
+
+          <!-- START BHUMAN GENERATOR -->
+
+            <div class="row human-cocktail-row">
+              <div class="col col-sm-5 body-column">
+                <!-- <div class="d-flex justify-content-between flex-column body-flex-column" style=""> -->
+              <div class="body-flex-column" style="">
+
+                  <div class="">
+                    <div class="bhuman-top" style="">
+                      <img class="bhuman-part bhuman-top-gif" src="http://dev.sofielson.com/ixd/gif/top.gif" alt="Head">
+                    </div>
+                  </div>
+
+                  <div class="">
+                    <div class="bhuman-middle" style="">
+                      <img class="bhuman-part bhuman-middle-gif" src="http://dev.sofielson.com/ixd/gif/middle.gif" alt="Torso">
+                    </div>
+                  </div>
+
+                  <div class="">
+                    <div class="bhuman-bottom" style="">
+                      <img class="bhuman-part bhuman-bottom-gif" src="http://dev.sofielson.com/ixd/gif/bottom.gif" alt="Legs">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-7 col-sm-7 story-column" style="">
+                <div class="d-flex justify-content-center flex-column story-flex-column" style="">
+
+                  <div class="storybox bhuman-top-storybox"></div>
+                  <div class="storybox bhuman-middle-storybox"></div>
+                  <div class="storybox bhuman-bottom-storybox"></div>
+
+                </div>
+              </div>
+            </div>
+
+        <div class="row disclaimer-row" style="justify-content:center;">
+          <button id="generate" class="desktop-only">Stir cocktail</button>
+          <button id="generateMobile" class="mobile-only">Stir cocktail</button>
+        </div>
+
+        <div class="row" style="justify-content:center;">
+        <p class="refresh-page">Refresh page to stir the Human Cocktail again.</p>
+        </div>
+
+        <div class="row" style="justify-content:center;margin-top:15px;">
+          <p class="disclaimer">
+            <span class="italic">Disclaimer:
+Please note that the person in the story and the person in the photo are not the same.</span>
+          </p>
+        </div>
+
+
+
+        </div>
+          <!-- END BHUMAN GENERATOR -->
+          <!-- <div class="row mx-auto" style=""><i class="fa fa-angle-down" style="color:white;font-size:36px;margin-top:100px;margin-left:auto;margin-right:auto;" aria-hidden="true"></i></div> -->
+      <div class="row mx-auto" style="">
+        <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;margin-top:160px;" ></i>
+      </div>
+      <!-- </div> -->
+
+      <div class="d-block w-100" style="margin-top:140px;">
+          <!-- carousel stats -->
+          <div id="statCarousel" class="carousel slide" data-ride="carousel">
+            <!-- <ol class="carousel-indicators">
+              <li data-target="#statCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#statCarousel" data-slide-to="1"></li>
+              <li data-target="#statCarousel" data-slide-to="2"></li>
+              <li data-target="#statCarousel" data-slide-to="3"></li>
+              <li data-target="#statCarousel" data-slide-to="4"></li>
+              <li data-target="#statCarousel" data-slide-to="5"></li>
+            </ol> -->
+            <div class="carousel-inner">
+              <div class="carousel-item carousel-item-1 active">
+                <div class="stat-box">
+                  <p>
+                  According to a study conducted by Pew Research in the U.S earlier this year, about four-in-ten US adults say it has become more common for people to express racist views towards Asians since the pandemic began:
+                  </p>
+                  <p>39% said others have acted uncomfortably around them</p>
+                  <p>31% reported being the subject of race-based jokes or slurs</p>
+                  <p>26% admitted they feared being the target of a physical attack</p>
+                </div>
+              </div>
+              <div class="carousel-item carousel-item-2">
+                <div class="stat-box">
+                  <p>In the UK, the percentage of obese adults increased from 15% in 1993 to 27% in 2015, by which time 58% of women and 68% of men were designated overweight. All over the world, countless studies reveal that overweight employees face widespread prejudice.</p>
+
+                  <p>To begin with, they are less likely to be hired for a job. In a 2016 study led by the psychologist Stuart W Flint of Sheffield Hallam University, participants were asked to evaluate candidates for different types of jobs. Shown hypothetical CVs with photographs depicting fat and thin people, the participants clearly perceived men and women of average weight to be the most suitable for employment. Obese women were the least likely to be hired. The researchers concluded that stereotypes of obese people being “less physically capable and slothful” were likely to have played a role in this outcome.</p>
+
+                  <p>Earlier this year, University of Pennsylvania researchers concluded that obese people are stereotyped as being “lazy, incompetent, unattractive, lacking willpower and to blame for their excess weight”.</p>
+                </div>
+              </div>
+              <div class="carousel-item carousel-item-3">
+                <div class="stat-box">
+                  <p>
+                    More than 1 in 4 employees have experienced discrimination due to their looks. Looks have an impact on our professional lives: 86% of the employees surveyed by Univia believed physical appearance matters in the workplace. Overwhelmingly, respondents noted that appearance is an essential component of career success. Some of the top held beliefs included:</p>
+
+                  <p>Appearance influences client perception and company image (90%)</p>
+                  <p>Appearance affects employee confidence (85%)</p>
+                  <p>Appearance affects employee competency (73%)</p>
+                </div>
+              </div>
+              <div class="carousel-item carousel-item-4">
+                <div class="stat-box">
+                  <p>According to statistics gathered by <a href="https://moderngentlemen.net/tattoos-in-the-workplace-statistics/">moderngentlemen.net</a> - even though the modern workplace is becoming more tolerant of diversity, tattoos including, with each passing year. But still, we have a long way to go. Just have a look at the current statistics:</p>
+
+                  <p>63% of people over 60 don’t approve of tattoos in the office.
+                  More than half of the general population considers tattooed individuals as lacking in seriousness.
+                  Millennial parents approve in 70 percent of people with tattoos in child care.
+                  Only 23% of employers will employ a professional regardless of the number and location of their tattoos.
+                  Workplace diversity is greatly affected by tattoo discrimination in the recruiting process.</p>
+                </div>
+              </div>
+              <div class="carousel-item carousel-item-5">
+                <div class="stat-box">
+                  <p>
+                    According to a study conducted by The Department for Business, Innovation and Skills (BIS) and the <a href="https://www.equalityhumanrights.com/en/managing-pregnancy-and-maternity-workplace/pregnancy-and-maternity-discrimination-research-findings">Equality and Human Rights Commission</a>, around one in nine mothers (11%) reported that they were either dismissed; made compulsorily redundant, where others in their workplace were not; or treated so poorly they felt they had to leave their job; if scaled up to the general population this could mean as many as 54,000 mothers a year.
+                  </p>
+                </div>
+
+              </div>
+              <div class="carousel-item carousel-item-6">
+                <div class="stat-box">
+                  <p>
+                    A <a href="https://yougov.co.uk/">YouGov</a> survey of HR professionals revealed more than half of 515 people questioned said they believed it would be easier to recruit a non-disabled person.
+While a third admitted they had never interviewed a disabled person.
+                  </p>
+                </div>
+
+
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#statCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#statCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <!-- end carousel stats -->
+      </div>
+
+
+      <div class="row mx-auto" style="">
+        <i class="fas fa-glass-martini-alt" style="color:white;font-size:36px;margin-left:auto;margin-right:auto;margin-top:160px;" ></i>
+      </div>
+
+
+      <div class="d-block w-100">
+        <div class="container slide-container" style="margin-bottom: 100px;">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <h2>What you can do</h2>
+              <p>Thank you for taking the time to read through the stories told by these brave people. We hope that you bring these stories with you in your own work life and use your power to prevent history from repeating itself. If you want to help the cause, please consider donating money or show your support for any of the following organizations against discrimination in the workplace. Remember, the power lies with you.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h3>Sign petitions</h3>
+
+              <ul>
+                <li>
+                  <a href="https://actionnetwork.org/petitions/sign-the-petition-stop-discrimination-against-the-lgbtq-community-and-defend-lgbtq-workers-rights?source=twitter">Stop discrimination against the LGBTQ+ community and defend LGBTQ+ workers’ rights.</a>
+                </li>
+                <li>
+                  <a href="https://www.megaphone.org.uk/petitions/uk-gov-act-to-prevent-sexual-harassment-at-work">End sexual harassment at work.</a>
+                </li>
+                <li>
+                  <a href="https://www.change.org/p/christian-porter-religious-discrimination-bill-stop-the-coalition-s-handmaid-s-tale-2">Stop the Religious Discrimination Bill.</a>
+                </li>
+                <li>
+                  <a href="https://www.change.org/p/canadian-employers-canadian-goverment-make-it-illegal-and-classed-as-discrimination-to-not-hire-someone-based-on-hair-colour-haircut-tattoos-or-piercings">Make it illegal and classed as discrimination to not hire someone based on hair colour, haircut, tattoos, or piercings.</a>
+                </li>
+                <li>
+                  <a href="https://www.change.org/p/bernie-sanders-disabled-workers-deserve-equal-pay-eafcd865-378c-4221-bf84-e45a71d8151d">Disabled Workers deserve Equal Pay.</a>
+                </li>
+                <li>
+                  <a href="https://www.dove.com/us/en/stories/campaigns/the-crown-act.html">DOVE The CROWN Act.</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h3>Donate money</h3>
+
+              <ul>
+                <li>
+                  <a href="Signiteurope.com">Signiteurope.com</a>
+                </li>
+                <li>
+                  <a href="https://www.kingsfund.org.uk/projects/inequalities-inclusion-nhs-providers/support-racism-discrimination">Kingsfund</a>
+                </li>
+                <li>
+                  <a href="https://www.womenslawproject.org/">Womenslawproject.org</a>
+                </li>
+                <li>
+                  <a href="https://www.acas.org.uk/">acas.org.uk</a>
+                </li>
+                <li>
+                  <a href="https://www.ilo.org/global/publications/world-of-work-magazine/articles/WCMS_081324/lang--en/index.htm">ilo.org</a>
+                </li>
+                <li>
+                  <a href="https://www.aclu.org/issues/womens-rights/womens-rights-workplace/gender-justice-workplace">aclu.org</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h3>Know your rights</h3>
+
+              <ul>
+                <li>
+                  <a href="https://www.equalrights.org/issue/economic-workplace-equality/discrimination-at-work/">KNOW YOUR RIGHTS AT WORK Gender Discrimination at Work.</a>
+                </li>
+                <li>
+                  <a href="https://www.do.se/lag-och-ratt/diskrimineringslagen/">Swedish law of discrimination (in Swedish)</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
