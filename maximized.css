@@ -1,0 +1,309 @@
+
+  html,body{
+    overflow-x: hidden;
+  }
+  body{
+    background: #000000;
+  }
+  *{
+    font-family: 'futura-pt', sans-serif;
+    color: white;
+  }
+  h3{
+    margin-top: 10px;
+  }
+  .slide-container{
+    margin-top:200px;
+  }
+  .body-column{
+    left: 298px;
+  }
+  .bhuman-part{
+    width: 255px;
+  }
+  .bhuman-top{
+    z-index: 1;
+    position: relative;
+  }
+  .bhuman-middle{
+    margin-top: -55px;
+      z-index: -10;
+      position: relative;
+  }
+  .bhuman-bottom{
+    margin-top: -55px;
+      z-index: -20;
+      position: relative;
+  }
+  .carousel-item{
+    position: relative;
+    height: 500px;
+  }
+  .carousel-item:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
+    /* -webkit-animation-name: spin;
+    -webkit-animation-duration: 50000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 50000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 50000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg); */
+  }
+  .carousel-item-1:before{
+    background: url('http://dev.sofielson.com/ixd/img/top0.png') no-repeat center;
+  }
+  .carousel-item-2:before{
+    background: url('http://dev.sofielson.com/ixd/img/middle5.png') no-repeat center;
+  }
+  .carousel-item-3:before{
+    background: url('http://dev.sofielson.com/ixd/img/top2.png') no-repeat center;
+  }
+  .carousel-item-4:before{
+    background: url('http://dev.sofielson.com/ixd/img/middle2.png') no-repeat center;
+    /* background-size: 300px; */
+  }
+  .carousel-item-5:before{
+    background: url('http://dev.sofielson.com/ixd/img/middle6.png') no-repeat center;
+  }
+  .carousel-item-6:before{
+    background: url('http://dev.sofielson.com/ixd/img/bottom2_2.png') no-repeat center;
+    background-size: 350px;
+  }
+  .stat-box{
+    width: 70%;
+    position: absolute;
+    margin-left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .stat-box p{
+    font-size: 22px;
+    text-align: center;
+  }
+  @-moz-keyframes spin {
+      from { -moz-transform: rotate(0deg); }
+      to { -moz-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+      from { -webkit-transform: rotate(0deg); }
+      to { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+      from {transform:rotate(0deg);}
+      to {transform:rotate(360deg);}
+  }
+  .fa-glass-martini-alt{
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 3000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 3000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg);
+  }
+  #generate{
+    background: #d80f95;
+    font-size: 34px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 57px;
+   margin-left: auto;
+   margin-right: auto;
+   color: #ffffff;
+   border: none;
+  }
+  #generateMobile{
+    background: #d80f95;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 21px;
+   margin-left: auto;
+   margin-right: auto;
+   color: #ffffff;
+   border: none;
+  }
+  #generate:hover{
+    background: #990a69;
+  }
+  #generateMobile:hover{
+    background: #990a69;
+  }
+  .storybox{
+    opacity: 0;
+    z-index:999;
+    border-radius: 5px;
+    padding: 14px;
+    left: 10px;
+    top: 5px;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid white;
+    margin: 10px 350px 10px 0;
+  }
+  .storybox p{
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .bhuman-middle-storybox{
+    margin-left: 30px;
+  }
+  .bhuman-bottom-storybox, .bhuman-top-storybox{
+    margin-right: 377px;
+  }
+  a{
+    text-decoration: underline;
+    color: white !important;
+  }
+  .italic{
+    font-style: italic;
+  }
+  .body-flex-column{
+    height:100%;
+    float:right;
+    /* padding: auto; */
+    margin-right: 21px;
+  }
+  .refresh-page{
+    display:none;
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+  }
+  .story-flex-column{
+    height: 100%;
+    padding: 20px 0;
+  }
+  .human-cocktail-row{
+    height:670px;
+  }
+  .random-image{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .random-image img{
+    max-height: 480px;
+  }
+  .logo{
+    max-width: 270px;
+  }
+  @media screen and (max-width: 600px){
+    .random-image img{
+      max-height: 380px;
+    }
+    .logo{
+      margin: 0 auto;
+      display: flex;
+      margin-bottom: 65px;
+    }
+    .slide-container{
+      margin-top:100px;
+    }
+    .bhuman-part{
+      width: 180px;
+    }
+    .bhuman-middle{
+      margin-top: -35px;
+    }
+    .bhuman-bottom{
+      margin-top: -20px;
+    }
+    .desktop-only{
+      display:none !important;
+    }
+    .mobile-only{
+      display:block !important;
+    }
+    .bhuman-container{
+      margin-top: 0;
+    }
+    .storybox{
+      background: rgba(0, 0, 0, 0.7);
+      margin: 10px 0 10px 0;
+    }
+    .body-column{
+      max-width:200px !important;
+      left: 34%;
+    }
+    .body-flex-column{
+      margin-right: 8px;
+    }
+    .story-column{
+      display:none;
+    }
+    .human-cocktail-row{
+      height:500px;
+    }
+    .disclaimer{
+      width: 70%;
+    text-align: center;
+    }
+    .stat-box p{
+      font-size: 17px;
+    }
+    .carousel-item{
+      height: 880px;
+    }
+    #statCarousel{
+      margin-top: -70px;
+      margin-bottom: -106px;
+    }
+    .refresh-page{
+      width: 300px;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width: 900px){
+    .storybox{
+      width: 20em;
+    }
+    .body-column{
+      left: 220px;
+    }
+  }
+  @media screen and (min-width: 901px) and (max-width: 1240px){
+    .storybox{
+      margin-right: 30px;
+    }
+    .bhuman-middle-storybox{
+      margin-left: 22px;
+    }
+    .bhuman-bottom-storybox, .bhuman-top-storybox{
+      margin-right: 60px;
+    }
+    .bhuman-bottom,.bhuman-middle,.bhuman-top{
+      right: 0;
+    }
+    .body-column{
+      left: 257px;
+    }
+  }
+/* generate button show hide */
+  @media screen and (min-width: 601px){
+    .desktop-only{
+      display:block !important;
+    }
+    .mobile-only{
+      display:none !important;
+    }
+  }
